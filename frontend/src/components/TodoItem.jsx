@@ -15,7 +15,7 @@ const TodoItem = ({ id, todoText, todoDate, completed }) => {
   });
 
   const toggleComplete = () => {
-    fetch(`http://localhost:3000/todos/${id}`, {
+    fetch(`https://todolist-vrj9.onrender.com/todos/${id}`, {
       method: 'PATCH',      
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({completed: !isComplete})
@@ -32,7 +32,7 @@ const TodoItem = ({ id, todoText, todoDate, completed }) => {
   }
 
   const deleteHandler = () => {
-    fetch(`http://localhost:3000/todos/${id}`, {
+    fetch(`https://todolist-vrj9.onrender.com/todos/${id}`, {
       method: 'DELETE'
     })
     .then(res => res.json())
